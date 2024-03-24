@@ -10,7 +10,7 @@ const { post } = Astro.props
 ---
 
 <div class="post-date">
-  {post.UpdateDate ? <span>更新日：{getDateStr(post.UpdateDate)}</span> : ''}
+  {post.Date ? <span>更新日：{getDateStr(post.Date)}</span> : ''}
 </div>
 
 <style>
