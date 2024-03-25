@@ -18,7 +18,6 @@ import {
 } from '../../lib/blog-helpers.ts'
 import Layout from '../../layouts/Layout.astro'
 import PostDate from '../../components/PostDate.astro'
-import PostUpdateDate from '../../components/PostUpdateDate.astro'
 import PostTags from '../../components/PostTags.astro'
 import PostTitle from '../../components/PostTitle.astro'
 import PostBody from '../../components/PostBody.astro'
@@ -102,13 +101,9 @@ if (post.FeaturedImage && post.FeaturedImage.Url) {
 >
   <div slot="main" class={styles.main}>
     <div class={styles.post}>
-      <PostUpdateDate post={post} />
-      <PostTitle post={post} enableLink={false} />
-      <div style="display: flex; flex-wrap: wrap; column-gap:1em;">
       <PostDate post={post} />
-      <PostUpdateDate post={post} />
-      </div>
       <PostTags post={post} />
+      <PostTitle post={post} enableLink={false} />
       <PostBody blocks={blocks} />
       <PostTags post={post} />
 
